@@ -1,0 +1,196 @@
+/*--------------------*\
+  MEGA RADIO
+\*--------------------*/
+.mega-radio-group, .mega-radio, .mega-icon, .mega-text {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.mega-radio-group {
+  flex-wrap: wrap;
+  padding: 0;
+  margin-right: -.3125rem;
+  margin-left: -.3125rem;
+  min-height: 3.125rem;
+  border: 0 transparent;
+}
+
+.mega-radio {
+  flex: 1;
+  margin: 0 .3125rem .625rem;
+  border-radius: .3125rem;
+  cursor: pointer;
+}
+
+.mega-radio > input[type='radio'], input[type='radio']:after {
+  height: 100%;
+  width: 100%;
+}
+
+.mega-radio > input[type='radio'] {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.mega-radio > input[type='radio']:after {
+  content: '';
+  display: block; 
+  visibility: visible;
+  border: 0 solid transparent;
+  background-color: transparent; 
+}
+
+.mega-icon, .mega-text {
+  align-items: center; 
+  justify-content: center;
+}
+
+.mega-text {
+  flex: 1 1 100%; 
+  flex-wrap: wrap;
+  padding: .3125rem 0.625rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.mega-icon {
+  min-width: 2.5rem;
+  margin: -.0625rem;
+  font-size: 1.5rem;
+}
+
+/*  MEGA RADIO FILL */
+.mega-fill {
+  flex: 1 1 auto;
+}
+
+/*  MEGA RADIO SIZE */
+.mega-group-sm {
+  min-height: 2.1875rem;
+}
+
+.mega-group-sm .mega-text {
+  font-size: .90625rem;
+}
+
+.mega-group-sm .mega-icon {
+  font-size: .90625rem;
+}
+
+/*  MEGA RADIO FONT */
+.mega-text-uppercase > .mega-text {
+  text-transform: uppercase;
+}
+
+.mega-fw-semibold > .mega-text {
+  font-weight: 600;
+}
+
+.mega-fw-bold > .mega-text {
+  font-weight: bold;
+}
+
+/* MEGA RADIO COLORS */
+.mega-primary {
+  border: 2px solid #265fc9;
+  background-color: #fff;
+  color: #265fc9;
+  box-shadow: 0 2px 6px #265fc9;
+}
+  
+.mega-primary > .mega-icon,
+.mega-primary:hover,
+.mega-primary.mega-active {
+  background-color: #265fc9;
+  color: #fff;
+}
+  
+.mega-secondary {
+  border: 2px solid #6c757d;
+  background-color: #fff;
+  color: #6c757d;
+  box-shadow: 0 2px 6px #6c757d;
+}
+  
+.mega-secondary > .mega-icon,
+.mega-secondary:hover,
+.mega-secondary.mega-active {
+  background-color: #6c757d;
+  color: #fff;
+}
+  
+.mega-dark {
+  border: 2px solid #323a46;
+  background-color: #fff;
+  color: #323a46;
+  box-shadow: 0 2px 6px #323a46;
+}
+  
+.mega-dark > .mega-icon,
+.mega-dark:hover, 
+.mega-dark.mega-active {
+  background-color: #323a46;
+  color: #fff;
+}
+  
+.mega-pink {
+  border: 2px solid #f672a7;
+  background-color: #fff;
+  color: #f672a7;
+  box-shadow: 0 2px 6px #f672a7;
+}
+  
+.mega-pink > .mega-icon,
+.mega-pink:hover,
+.mega-pink.mega-active {
+  background-color: #f672a7;
+  color: #fff;
+}
+  
+.mega-purple {
+  border: 2px solid #7266ba;
+  background-color: #fff;
+  color: #7266ba;
+  box-shadow: 0 2px 6px #7266ba;
+}
+  
+.mega-purple > .mega-icon,
+.mega-purple:hover,
+.mega-purple.mega-active {
+  background-color: #7266ba;
+  color: #fff;
+}
+  
+.mega-blue-darken {
+  border: 2px solid #0D47A1;
+  background-color: #fff;
+  color: #0D47A1;
+  box-shadow: 0 2px 6px #0D47A1;
+}
+  
+.mega-blue-darken > .mega-icon,
+.mega-blue-darken:hover,
+.mega-blue-darken.mega-active {
+  background-color: #0D47A1;
+  color: #fff;
+}
+  
+.mega-orange {
+  border: 2px solid #ff6f00;
+  background-color: #fff;
+  color: #ff6f00;
+  box-shadow: 0 2px 6px #ff6f00;
+}
+  
+.mega-orange > .mega-icon,
+.mega-orange:hover,
+.mega-orange.mega-active {
+  background-color: #ff6f00;
+  color: #fff;
+}
