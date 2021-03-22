@@ -1,80 +1,124 @@
-var MegaRadio = MegaRadio || {};
-
-MegaRadio.MegaRadio = (() => {
+const MegaRadio = (() => {
     function MegaRadio() {
         this.megaRadioGroupList = Array.from(document.querySelectorAll('.mega-radio-group'));
-        this.megaRadioList = document.querySelectorAll('input.mega-radio[type="radio"]');
+        this.megaRadioInputList = document.querySelectorAll('input.mega-radio[type="radio"]');
 
-        MegaRadio.prototype.enable = () => {
-            contructMegaRadio.call(this);
-
-            handleMegaRadioGroup.call(this);
-        };
+        initMegaRadio();
+        defineMegaRadioGroupEvent();
     }
 
-    function contructMegaRadio() {
-        this.megaRadioList.forEach(inputRadio => {
+    function initMegaRadio() {
+        this.megaRadioInputList.forEach(inputRadio => {
             const megaRadioGroupDiv = inputRadio.closest('.mega-radio-group');
             const inputRadioClasses = Array.from(inputRadio.classList);
-            const megaRadioDiv = document.createElement('div');
-            const megaRadioTextDiv = document.createElement('div');
-            const megaRadioIconDiv = document.createElement('div');
-            const icon = document.createElement('i');
-            const hasActiveMegaRadio = inputRadioClasses.includes('mega-active');
-            const hasText = inputRadio.dataset.text;
-            const hasIcon = inputRadio.dataset.icon;
 
-            megaRadioDiv.classList.add(...inputRadioClasses);
-            megaRadioTextDiv.classList.add('mega-text');
-            megaRadioTextDiv.textContent = hasText || inputRadio.value.replace(inputRadio.value[0], inputRadio.value[0].toUpperCase());
-            
-            if(hasIcon) {
-                megaRadioIconDiv.classList.add('mega-icon');
-                icon.classList.add(...inputRadio.dataset.icon.split(' '));
+            const megaRadioEl = createElement('div', {
+                'class': inputRadioClasses.join(' ')
+            });
 
-                megaRadioDiv.insertAdjacentElement('beforeend', megaRadioIconDiv)
-                megaRadioIconDiv.insertAdjacentElement('beforeend', icon);
-            }
-            
-            megaRadioGroupDiv.insertAdjacentElement('beforeend', megaRadioDiv);
-            megaRadioDiv.insertAdjacentElement('beforeend', megaRadioTextDiv);
-            megaRadioDiv.insertAdjacentElement('beforeend', inputRadio);
+            const megaRadioTextEl = createElement('div', {
+                'class': 'mega-text',
+            });
 
-            if (hasActiveMegaRadio) {
-                inputRadio.checked = true;
-            }
-
-            inputRadio.removeAttribute('class');
-            inputRadio.removeAttribute('data-icon');
+            showMegaRadioIcon(inputRadio, megaRadioEl);
+            checkInitMegaRadio(inputRadioClasses, inputRadio);
+            showCheckIcon(megaRadioEl);
+            showMegaRadio(megaRadioGroupDiv, megaRadioEl, megaRadioTextEl, inputRadio);
         });
     }
 
-    function handleMegaRadioGroup() {
-        this.megaRadioGroupList.forEach(megaRadioGroup => megaRadioGroup.addEventListener('click', checkMegaRadio.bind(this, megaRadioGroup)));
+    const checkInitMegaRadio = (inputRadioClasses, inputRadio) => {
+        const hasActiveMegaRadio = inputRadioClasses.includes('-mega-active');
+
+        if (hasActiveMegaRadio) inputRadio.checked = true;
     }
 
-    function checkMegaRadio(megaRadioGroup, event) {
-        const element = event.target;
-        const isMegaRadio = element.tagName === 'INPUT';
+    const showMegaRadioIcon = (inputRadio, megaRadioEl) => {
+        const hasIcon = inputRadio.dataset.icon;
 
-        if (isMegaRadio) {
-            const megaRadioList = Array.from(megaRadioGroup.children);
-
-            megaRadioList.forEach(megaRadio => {
-                const inputRadio = megaRadio.querySelector('input[type="radio"]');
-
-                megaRadio.classList.remove('mega-active');
-                inputRadio.checked = false;
-
-                if (inputRadio.value === element.value) {
-                    megaRadio.classList.add('mega-active');
-                    inputRadio.checked = true;
-                }
+        if (hasIcon) {
+            const megaRadioIconEl = createElement('div', {
+                'class': 'mega-icon'
             });
+
+            const iconEl = createElement('i', {
+                'class': inputRadio.dataset.icon
+            });
+
+            megaRadioEl.insertAdjacentElement('beforeend', megaRadioIconEl)
+            megaRadioIconEl.insertAdjacentElement('beforeend', iconEl);
         }
     }
 
-    return MegaRadio;
-})();
+    const showMegaRadio = (megaRadioGroupDiv, megaRadioEl, megaRadioTextEl, inputRadio) => {
+        const megaRadiotext = inputRadio.dataset.text;
+        const megaRadioUpperText = inputRadio.value.replace(inputRadio.value[0], inputRadio.value[0].toUpperCase());
 
-document.addEventListener('DOMContentLoaded', () => (new MegaRadio.MegaRadio()).enable());
+        megaRadioTextEl.textContent = megaRadiotext || megaRadioUpperText
+
+        megaRadioGroupDiv.insertAdjacentElement('beforeend', megaRadioEl);
+        megaRadioEl.insertAdjacentElement('beforeend', megaRadioTextEl);
+        megaRadioEl.insertAdjacentElement('beforeend', inputRadio);
+
+        inputRadio.removeAttribute('class');
+        inputRadio.removeAttribute('data-icon');
+    }
+
+    const defineMegaRadioGroupEvent = () => {
+        this.megaRadioGroupList.forEach(megaRadioGroup => megaRadioGroup.addEventListener('click', handleMegaRadioGroup));
+    }
+
+    const handleMegaRadioGroup = event => {
+        const isMegaRadioInputEl = event.target.tagName === 'INPUT';
+        
+        if (isMegaRadioInputEl) {
+            unCheckMegaRadio(event);
+            checkMegaRadio(event);
+        }
+    }
+
+    const checkMegaRadio = event => {
+        const megaRadioEl = event.target.parentElement;
+        const megaRadioInputEl = event.target;
+
+        megaRadioEl.classList.add('-mega-active');
+        megaRadioInputEl.checked = true;
+
+        showCheckIcon(megaRadioEl);
+    }
+
+    const unCheckMegaRadio = event => {
+        const megaRadioGroupEl = event.target.closest('.mega-radio-group');
+        const megaRadioEl = megaRadioGroupEl.querySelector('.-mega-active');
+        const megaRadioCheckEl = megaRadioEl.querySelector('.mega-check');
+        const megaRadioInputEl = megaRadioEl.querySelector('input[type="radio"]');
+
+        megaRadioCheckEl.remove();
+        megaRadioEl.classList.remove('-mega-active');
+        megaRadioInputEl.checked = false;
+    }
+
+    const showCheckIcon = megaRadioEl => {
+        const megaRadioCheckEl = createElement('div', {'class': 'mega-check'});
+        const checkIconEl = createElement('div', {'class': 'mega-check-icon'});
+
+        const hasActiveMegaRadio = Array.from(megaRadioEl.classList).includes('-mega-active');
+
+        if (hasActiveMegaRadio) {
+            megaRadioEl.insertAdjacentElement('afterbegin', megaRadioCheckEl);
+            megaRadioCheckEl.insertAdjacentElement('beforeend', checkIconEl);
+        }
+    }
+
+    const createElement = (elementName, attributes) => {
+        const element = document.createElement(elementName);
+
+        Object.entries(attributes).forEach(([key, attribute]) => {
+            element.setAttribute(key, attribute);
+        });
+
+        return element;
+    }
+
+    return MegaRadio();
+})();

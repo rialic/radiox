@@ -23,32 +23,23 @@
   cursor: pointer;
 }
 
-.mega-radio > input[type='radio'], input[type='radio']:after {
-  height: 100%;
-  width: 100%;
-}
-
 .mega-radio > input[type='radio'] {
   position: absolute;
-  visibility: hidden;
-  top: 0;
+  top: -2px;
+  left: -2px;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   cursor: pointer;
+  overflow: visible;
+  opacity: 0;
+  line-height: 1.15;
   z-index: 1;
 }
 
-.mega-radio > input[type='radio']:after {
-  content: '';
-  display: block; 
-  visibility: visible;
-  border: 0 solid transparent;
-  background-color: transparent; 
-}
-
-.mega-icon, .mega-text {
-  align-items: center; 
-  justify-content: center;
+.mega-radio > input[type='radio'] {
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
 }
 
 .mega-text {
@@ -65,132 +56,331 @@
   font-size: 1.5rem;
 }
 
+.mega-icon, .mega-text {
+  align-items: center; 
+  justify-content: center;
+}
+
+.mega-check {
+  padding: 0 .5rem;
+  position: absolute;
+  top: -.4375rem;
+  right: -.3125rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.mega-check-icon {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: .75rem;
+  width: .25rem;
+}
+
 /*  MEGA RADIO FILL */
-.mega-fill {
+.-mega-fill {
   flex: 1 1 auto;
 }
 
 /*  MEGA RADIO SIZE */
-.mega-group-sm {
+.-mega-group-sm {
   min-height: 2.1875rem;
 }
 
-.mega-group-sm .mega-text {
+.-mega-group-sm .mega-text {
   font-size: .90625rem;
 }
 
-.mega-group-sm .mega-icon {
+.-mega-group-sm .mega-icon {
   font-size: .90625rem;
 }
 
 /*  MEGA RADIO FONT */
-.mega-text-uppercase > .mega-text {
+.-mega-text-uppercase > .mega-text {
   text-transform: uppercase;
 }
 
-.mega-fw-semibold > .mega-text {
+.-mega-fw-semibold > .mega-text {
   font-weight: 600;
 }
 
-.mega-fw-bold > .mega-text {
+.-mega-fw-bold > .mega-text {
   font-weight: bold;
 }
 
 /* MEGA RADIO COLORS */
-.mega-primary {
-  border: 2px solid #265fc9;
+.-mega-primary {
+  border: 2px solid #348cd4;
   background-color: #fff;
-  color: #265fc9;
-  box-shadow: 0 2px 6px #265fc9;
+  color: #348cd4;
+  box-shadow: 0 0 0 rgb(52, 139, 212 / 50%);
 }
-  
-.mega-primary > .mega-icon,
-.mega-primary:hover,
-.mega-primary.mega-active {
-  background-color: #265fc9;
+
+.-mega-primary > .mega-check {
+  border: 2px solid #348cd4;
+}
+
+.-mega-primary .mega-check-icon {
+  border-bottom: 2px solid #348cd4;
+  border-right: 2px solid #348cd4;
+}
+
+.-mega-primary > .mega-icon,
+.-mega-primary:hover,
+.-mega-primary.-mega-active {
+  background-color: #348cd4;
   color: #fff;
 }
-  
-.mega-secondary {
+
+.-mega-secondary {
   border: 2px solid #6c757d;
   background-color: #fff;
   color: #6c757d;
-  box-shadow: 0 2px 6px #6c757d;
+  box-shadow: 0 0 0 rgb(108, 117, 125 / 50%);
 }
-  
-.mega-secondary > .mega-icon,
-.mega-secondary:hover,
-.mega-secondary.mega-active {
+
+.-mega-secondary > .mega-check {
+  border: 2px solid #6c757d;
+}
+
+.-mega-secondary .mega-check-icon {
+  border-bottom: 2px solid #6c757d;
+  border-right: 2px solid #6c757d;
+}
+
+.-mega-secondary > .mega-icon,
+.-mega-secondary:hover,
+.-mega-secondary.-mega-active {
   background-color: #6c757d;
   color: #fff;
 }
-  
-.mega-dark {
+
+.-mega-success {
+  border: 2px solid #78c350;
+  background-color: #fff;
+  color: #78c350;
+  box-shadow: 0 0 0 rgb(120, 195, 80 / 50%);
+}
+
+.-mega-success > .mega-check {
+  border: 2px solid #78c350;
+}
+
+.-mega-success .mega-check-icon {
+  border-bottom: 2px solid #78c350;
+  border-right: 2px solid #78c350;
+}
+
+.-mega-success > .mega-icon,
+.-mega-success:hover,
+.-mega-success.-mega-active {
+  background-color: #78c350;
+  color: #fff;
+}
+
+.-mega-danger {
+  border: 2px solid #dc3545;
+  background-color: #fff;
+  color: #dc3545;
+  box-shadow: 0 0 0 rgb(220, 53, 69 / 50%);
+}
+
+.-mega-danger > .mega-check {
+  border: 2px solid #dc3545;
+}
+
+.-mega-danger .mega-check-icon {
+  border-bottom: 2px solid #dc3545;
+  border-right: 2px solid #dc3545;
+}
+
+.-mega-danger > .mega-icon,
+.-mega-danger:hover,
+.-mega-danger.-mega-active {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.-mega-warning {
+  border: 2px solid #ff9800;
+  background-color: #fff;
+  color: #ff9800;
+  box-shadow: 0 0 0 rgb(255, 153, 0 / 50%);
+}
+
+.-mega-warning > .mega-check {
+  border: 2px solid #ff9800;
+}
+
+.-mega-warning .mega-check-icon {
+  border-bottom: 2px solid #ff9800;
+  border-right: 2px solid #ff9800;
+}
+
+.-mega-warning > .mega-icon,
+.-mega-warning:hover,
+.-mega-warning.-mega-active {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.-mega-info {
+  border: 2px solid #0dcaf0;
+  background-color: #fff;
+  color: #0dcaf0;
+  box-shadow: 0 0 0 rgb(13, 204, 240 / 50%);
+}
+
+.-mega-info > .mega-check {
+  border: 2px solid #0dcaf0;
+}
+
+.-mega-info .mega-check-icon {
+  border-bottom: 2px solid #0dcaf0;
+  border-right: 2px solid #0dcaf0;
+}
+
+.-mega-info > .mega-icon,
+.-mega-info:hover,
+.-mega-info.-mega-active {
+  background-color: #0dcaf0;
+  color: #fff;
+}
+
+.-mega-dark {
   border: 2px solid #323a46;
   background-color: #fff;
   color: #323a46;
-  box-shadow: 0 2px 6px #323a46;
+  box-shadow: 0 0 0 rgb(50, 58, 70 / 50%);
+}
+
+.-mega-dark > .mega-check {
+  border: 2px solid #323a46;
+}
+
+.-mega-dark .mega-check-icon {
+  border-bottom: 2px solid #323a46;
+  border-right: 2px solid #323a46;
 }
   
-.mega-dark > .mega-icon,
-.mega-dark:hover, 
-.mega-dark.mega-active {
+.-mega-dark > .mega-icon,
+.-mega-dark:hover, 
+.-mega-dark.-mega-active {
   background-color: #323a46;
   color: #fff;
 }
   
-.mega-pink {
-  border: 2px solid #f672a7;
+.-mega-pink {
+  border: 2px solid #f06292;
   background-color: #fff;
-  color: #f672a7;
-  box-shadow: 0 2px 6px #f672a7;
+  color: #f06292;
+  box-shadow: 0 0 0 rgb(245 107 162 / 50%);
 }
-  
-.mega-pink > .mega-icon,
-.mega-pink:hover,
-.mega-pink.mega-active {
-  background-color: #f672a7;
+
+.-mega-pink > .mega-check {
+  border: 2px solid #f06292;
+}
+
+.-mega-pink .mega-check-icon {
+  border-bottom: 2px solid #f06292;
+  border-right: 2px solid #f06292;
+}
+
+.-mega-pink > .mega-icon,
+.-mega-pink:hover,
+.-mega-pink.-mega-active {
+  background-color: #f06292;
   color: #fff;
 }
-  
-.mega-purple {
-  border: 2px solid #7266ba;
+
+.-mega-lilac {
+  border: 2px solid #526dee;
   background-color: #fff;
-  color: #7266ba;
-  box-shadow: 0 2px 6px #7266ba;
+  color: #526dee;
+  box-shadow: 0 0 0 rgb(82, 110, 238 / 50%);
 }
-  
-.mega-purple > .mega-icon,
-.mega-purple:hover,
-.mega-purple.mega-active {
-  background-color: #7266ba;
+
+.-mega-lilac > .mega-check {
+  border: 2px solid #526dee;
+}
+
+.-mega-lilac .mega-check-icon {
+  border-bottom: 2px solid #526dee;
+  border-right: 2px solid #526dee;
+}
+
+.-mega-lilac > .mega-icon,
+.-mega-lilac:hover,
+.-mega-lilac.-mega-active {
+  background-color: #526dee;
   color: #fff;
 }
-  
-.mega-blue-darken {
+
+.-mega-purple {
+  border: 2px solid #6559cc;
+  background-color: #fff;
+  color: #6559cc;
+  box-shadow: 0 0 0 rgb(101, 89, 204 / 50%);
+}
+
+.-mega-purple > .mega-check {
+  border: 2px solid #6559cc;
+}
+
+.-mega-purple .mega-check-icon {
+  border-bottom: 2px solid #6559cc;
+  border-right: 2px solid #6559cc;
+}
+
+.-mega-purple > .mega-icon,
+.-mega-purple:hover,
+.-mega-purple.-mega-active {
+  background-color: #6559cc;
+  color: #fff;
+}
+
+.-mega-blue-darken {
   border: 2px solid #0D47A1;
   background-color: #fff;
   color: #0D47A1;
-  box-shadow: 0 2px 6px #0D47A1;
+  box-shadow: 0 0 0 rgb(13, 70, 161 / 50%);
 }
-  
-.mega-blue-darken > .mega-icon,
-.mega-blue-darken:hover,
-.mega-blue-darken.mega-active {
+
+.-mega-blue-darken > .mega-check {
+  border: 2px solid #0D47A1;
+}
+
+.-mega-blue-darken .mega-check-icon {
+  border-bottom: 2px solid #0D47A1;
+  border-right: 2px solid #0D47A1;
+}
+
+.-mega-blue-darken > .mega-icon,
+.-mega-blue-darken:hover,
+.-mega-blue-darken.-mega-active {
   background-color: #0D47A1;
   color: #fff;
 }
-  
-.mega-orange {
+
+.-mega-orange {
   border: 2px solid #ff6f00;
   background-color: #fff;
   color: #ff6f00;
-  box-shadow: 0 2px 6px #ff6f00;
+  box-shadow: 0 0 0 rgb(255, 111, 0 / 50%);
+}
+
+.-mega-orange > .mega-check {
+  border: 2px solid #ff6f00;
+}
+
+.-mega-orange .mega-check-icon {
+  border-bottom: 2px solid #ff6f00;
+  border-right: 2px solid #ff6f00;
 }
   
-.mega-orange > .mega-icon,
-.mega-orange:hover,
-.mega-orange.mega-active {
+.-mega-orange > .mega-icon,
+.-mega-orange:hover,
+.-mega-orange.-mega-active {
   background-color: #ff6f00;
   color: #fff;
 }
