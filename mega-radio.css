@@ -27,6 +27,8 @@
   position: absolute;
   top: -2px;
   left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,11 +37,6 @@
   opacity: 0;
   line-height: 1.15;
   z-index: 1;
-}
-
-.mega-radio > input[type='radio'] {
-  height: calc(100% + 4px);
-  width: calc(100% + 4px);
 }
 
 .mega-text {
@@ -126,7 +123,6 @@
   border: 2px solid #348cd4;
   background-color: #fff;
   color: #348cd4;
-  box-shadow: 0 0 0 rgb(52, 139, 212 / 50%);
 }
 
 .-mega-primary > .mega-check {
@@ -149,7 +145,6 @@
   border: 2px solid #6c757d;
   background-color: #fff;
   color: #6c757d;
-  box-shadow: 0 0 0 rgb(108, 117, 125 / 50%);
 }
 
 .-mega-secondary > .mega-check {
@@ -172,7 +167,6 @@
   border: 2px solid #78c350;
   background-color: #fff;
   color: #78c350;
-  box-shadow: 0 0 0 rgb(120, 195, 80 / 50%);
 }
 
 .-mega-success > .mega-check {
@@ -195,7 +189,6 @@
   border: 2px solid #dc3545;
   background-color: #fff;
   color: #dc3545;
-  box-shadow: 0 0 0 rgb(220, 53, 69 / 50%);
 }
 
 .-mega-danger > .mega-check {
@@ -218,7 +211,6 @@
   border: 2px solid #ff9800;
   background-color: #fff;
   color: #ff9800;
-  box-shadow: 0 0 0 rgb(255, 153, 0 / 50%);
 }
 
 .-mega-warning > .mega-check {
@@ -241,7 +233,6 @@
   border: 2px solid #0dcaf0;
   background-color: #fff;
   color: #0dcaf0;
-  box-shadow: 0 0 0 rgb(13, 204, 240 / 50%);
 }
 
 .-mega-info > .mega-check {
@@ -264,7 +255,6 @@
   border: 2px solid #323a46;
   background-color: #fff;
   color: #323a46;
-  box-shadow: 0 0 0 rgb(50, 58, 70 / 50%);
 }
 
 .-mega-dark > .mega-check {
@@ -287,7 +277,6 @@
   border: 2px solid #f06292;
   background-color: #fff;
   color: #f06292;
-  box-shadow: 0 0 0 rgb(245 107 162 / 50%);
 }
 
 .-mega-pink > .mega-check {
@@ -310,7 +299,6 @@
   border: 2px solid #526dee;
   background-color: #fff;
   color: #526dee;
-  box-shadow: 0 0 0 rgb(82, 110, 238 / 50%);
 }
 
 .-mega-lilac > .mega-check {
@@ -333,7 +321,6 @@
   border: 2px solid #6559cc;
   background-color: #fff;
   color: #6559cc;
-  box-shadow: 0 0 0 rgb(101, 89, 204 / 50%);
 }
 
 .-mega-purple > .mega-check {
@@ -356,7 +343,6 @@
   border: 2px solid #0D47A1;
   background-color: #fff;
   color: #0D47A1;
-  box-shadow: 0 0 0 rgb(13, 70, 161 / 50%);
 }
 
 .-mega-blue-darken > .mega-check {
@@ -379,7 +365,6 @@
   border: 2px solid #ff6f00;
   background-color: #fff;
   color: #ff6f00;
-  box-shadow: 0 0 0 rgb(255, 111, 0 / 50%);
 }
 
 .-mega-orange > .mega-check {
