@@ -1,13 +1,13 @@
 /*--------------------*\
   MEGA RADIO
 \*--------------------*/
-.mega-radio-group, .mega-radio, .mega-icon, .mega-text {
+.mega-group, .mega-radio, .mega-icon, .mega-text {
   position: relative;
   display: flex;
   box-sizing: border-box;
 }
 
-.mega-radio-group {
+.mega-group {
   flex-wrap: wrap;
   padding: 0;
   margin-right: -.3125rem;
@@ -65,7 +65,7 @@
   padding: 0 .5rem;
   position: absolute;
   top: -.4375rem;
-  right: -.3125rem;
+  right: -.625rem;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -88,11 +88,24 @@
 }
 
 .-mega-group-sm .mega-text {
-  font-size: .90625rem;
+  font-size: .875rem;
 }
 
 .-mega-group-sm .mega-icon {
-  font-size: .90625rem;
+  font-size: .875rem;
+}
+
+.-mega-group-xs {
+  min-height: 2.1875rem;
+}
+
+.-mega-group-xs .mega-text {
+  font-size: .75rem;
+  padding: .1875rem 0.625rem;
+}
+
+.-mega-group-xs .mega-icon {
+  font-size: .75rem;
 }
 
 /*  MEGA RADIO FONT */

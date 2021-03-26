@@ -1,6 +1,6 @@
 const MegaRadio = (() => {
     function MegaRadio() {
-        this.megaRadioGroupList = Array.from(document.querySelectorAll('.mega-radio-group'));
+        this.megaRadioGroupList = Array.from(document.querySelectorAll('.mega-group'));
         this.megaRadioInputList = document.querySelectorAll('input.mega-radio[type="radio"]');
 
         initMegaRadio();
@@ -9,7 +9,7 @@ const MegaRadio = (() => {
 
     function initMegaRadio() {
         this.megaRadioInputList.forEach(inputRadio => {
-            const megaRadioGroupDiv = inputRadio.closest('.mega-radio-group');
+            const megaRadioGroupDiv = inputRadio.closest('.mega-group');
             const inputRadioClasses = Array.from(inputRadio.classList);
 
             const megaRadioEl = createElement('div', {
@@ -88,7 +88,7 @@ const MegaRadio = (() => {
     }
 
     const unCheckMegaRadio = event => {
-        const megaRadioGroupEl = event.target.closest('.mega-radio-group');
+        const megaRadioGroupEl = event.target.closest('.mega-group');
         const megaRadioEl = megaRadioGroupEl.querySelector('.-mega-active');
         const megaRadioCheckEl = megaRadioEl.querySelector('.mega-check');
         const megaRadioInputEl = megaRadioEl.querySelector('input[type="radio"]');
