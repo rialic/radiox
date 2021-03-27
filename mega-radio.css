@@ -62,7 +62,8 @@
 }
 
 .mega-check {
-  padding: 0 .5rem;
+  display: flex;
+  padding: .125rem .3125rem .1875rem;
   position: absolute;
   top: -.4375rem;
   right: -.3125rem;
@@ -73,7 +74,7 @@
 .mega-check-icon {
   display: inline-block;
   transform: rotate(45deg);
-  height: .75rem;
+  height: .5rem;
   width: .25rem;
 }
 
