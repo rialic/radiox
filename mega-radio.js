@@ -1,4 +1,4 @@
-const MegaRadio = (() => {
+(() => {
     function MegaRadio() {
         this.megaRadioGroupList = Array.from(document.querySelectorAll('.mega-group'));
         this.megaRadioInputList = document.querySelectorAll('input.mega-radio[type="radio"]');
