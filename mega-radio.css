@@ -50,6 +50,7 @@
 .mega-icon {
   min-width: 2.5rem;
   margin: -.0625rem;
+  border-radius: .3125rem;
   font-size: 1.5rem;
 }
 
