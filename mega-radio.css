@@ -1,13 +1,13 @@
 /*--------------------*\
   MEGA RADIO
 \*--------------------*/
-.mega-group, .mega-radio, .mega-icon, .mega-text {
+.m-radio-group, .m-radio, .m-radio-icon, .m-radio-text {
   position: relative;
   display: flex;
   box-sizing: border-box;
 }
 
-.mega-group {
+.m-radio-group {
   flex-wrap: wrap;
   padding: 0;
   margin-right: -.3125rem;
@@ -16,14 +16,14 @@
   border: 0 transparent;
 }
 
-.mega-radio {
+.m-radio {
   flex: 1;
   margin: 0 .3125rem .625rem;
   border-radius: .3125rem;
   cursor: pointer;
 }
 
-.mega-radio > input[type='radio'] {
+.m-radio > input[type='radio'] {
   position: absolute;
   top: -2px;
   left: -2px;
@@ -39,7 +39,7 @@
   z-index: 1;
 }
 
-.mega-text {
+.m-radio-text {
   flex: 1 1 100%; 
   flex-wrap: wrap;
   padding: .3125rem 0.625rem;
@@ -47,19 +47,19 @@
   font-family: inherit;
 }
 
-.mega-icon {
+.m-radio-icon {
   min-width: 2.5rem;
   margin: -.0625rem;
   border-radius: .3125rem;
   font-size: 1.5rem;
 }
 
-.mega-icon, .mega-text {
+.m-radio-icon, .m-radio-text {
   align-items: center; 
   justify-content: center;
 }
 
-.mega-check {
+.m-radio-check {
   display: flex;
   padding: .125rem .3125rem .1875rem;
   position: absolute;
@@ -69,7 +69,7 @@
   background-color: #fff;
 }
 
-.mega-check-icon {
+.m-radio-check--icon {
   display: inline-block;
   transform: rotate(45deg);
   height: .5rem;
@@ -77,310 +77,310 @@
 }
 
 /*  MEGA RADIO FILL */
-.-mega-fill {
+.-m-radio-fill {
   flex: 1 1 auto;
 }
 
 /*  MEGA RADIO SIZE */
-.-mega-group-sm {
+.-m-radio-group-sm {
   min-height: 2.1875rem;
 }
 
-.-mega-group-sm .mega-text {
+.-m-radio-group-sm .m-radio-text {
   font-size: .875rem;
 }
 
-.-mega-group-sm .mega-icon {
+.-m-radio-group-sm .m-radio-icon {
   font-size: .875rem;
 }
 
-.-mega-group-xs {
+.-m-radio-group-xs {
   min-height: 2.1875rem;
 }
 
-.-mega-group-xs .mega-text {
+.-m-radio-group-xs .m-radio-text {
   font-size: .75rem;
   padding: .1875rem 0.625rem;
 }
 
-.-mega-group-xs .mega-icon {
+.-m-radio-group-xs .m-radio-icon {
   font-size: .75rem;
 }
 
 /*  MEGA RADIO FONT */
-.-mega-text-uppercase > .mega-text {
+.-m-radio-text-uppercase > .m-radio-text {
   text-transform: uppercase;
 }
 
-.-mega-fw-semibold > .mega-text {
+.-m-radio-fw-semibold > .m-radio-text {
   font-weight: 600;
 }
 
-.-mega-fw-bold > .mega-text {
+.-m-radio-fw-bold > .m-radio-text {
   font-weight: bold;
 }
 
 /* MEGA RADIO COLORS */
-.-mega-primary {
+.-m-radio-primary {
   border: 2px solid #348cd4;
   background-color: #fff;
   color: #348cd4;
 }
 
-.-mega-primary > .mega-check {
+.-m-radio-primary > .m-radio-check {
   border: 2px solid #348cd4;
 }
 
-.-mega-primary .mega-check-icon {
+.-m-radio-primary .m-radio-check--icon {
   border-bottom: 2px solid #348cd4;
   border-right: 2px solid #348cd4;
 }
 
-.-mega-primary > .mega-icon,
-.-mega-primary:hover,
-.-mega-primary.-mega-active {
+.-m-radio-primary > .m-radio-icon,
+.-m-radio-primary:hover,
+.-m-radio-primary.-m-radio-active {
   background-color: #348cd4;
   color: #fff;
 }
 
-.-mega-secondary {
+.-m-radio-secondary {
   border: 2px solid #6c757d;
   background-color: #fff;
   color: #6c757d;
 }
 
-.-mega-secondary > .mega-check {
+.-m-radio-secondary > .m-radio-check {
   border: 2px solid #6c757d;
 }
 
-.-mega-secondary .mega-check-icon {
+.-m-radio-secondary .m-radio-check--icon {
   border-bottom: 2px solid #6c757d;
   border-right: 2px solid #6c757d;
 }
 
-.-mega-secondary > .mega-icon,
-.-mega-secondary:hover,
-.-mega-secondary.-mega-active {
+.-m-radio-secondary > .m-radio-icon,
+.-m-radio-secondary:hover,
+.-m-radio-secondary.-m-radio-active {
   background-color: #6c757d;
   color: #fff;
 }
 
-.-mega-success {
+.-m-radio-success {
   border: 2px solid #78c350;
   background-color: #fff;
   color: #78c350;
 }
 
-.-mega-success > .mega-check {
+.-m-radio-success > .m-radio-check {
   border: 2px solid #78c350;
 }
 
-.-mega-success .mega-check-icon {
+.-m-radio-success .m-radio-check--icon {
   border-bottom: 2px solid #78c350;
   border-right: 2px solid #78c350;
 }
 
-.-mega-success > .mega-icon,
-.-mega-success:hover,
-.-mega-success.-mega-active {
+.-m-radio-success > .m-radio-icon,
+.-m-radio-success:hover,
+.-m-radio-success.-m-radio-active {
   background-color: #78c350;
   color: #fff;
 }
 
-.-mega-danger {
+.-m-radio-danger {
   border: 2px solid #dc3545;
   background-color: #fff;
   color: #dc3545;
 }
 
-.-mega-danger > .mega-check {
+.-m-radio-danger > .m-radio-check {
   border: 2px solid #dc3545;
 }
 
-.-mega-danger .mega-check-icon {
+.-m-radio-danger .m-radio-check--icon {
   border-bottom: 2px solid #dc3545;
   border-right: 2px solid #dc3545;
 }
 
-.-mega-danger > .mega-icon,
-.-mega-danger:hover,
-.-mega-danger.-mega-active {
+.-m-radio-danger > .m-radio-icon,
+.-m-radio-danger:hover,
+.-m-radio-danger.-m-radio-active {
   background-color: #dc3545;
   color: #fff;
 }
 
-.-mega-warning {
+.-m-radio-warning {
   border: 2px solid #ff9800;
   background-color: #fff;
   color: #ff9800;
 }
 
-.-mega-warning > .mega-check {
+.-m-radio-warning > .m-radio-check {
   border: 2px solid #ff9800;
 }
 
-.-mega-warning .mega-check-icon {
+.-m-radio-warning .m-radio-check--icon {
   border-bottom: 2px solid #ff9800;
   border-right: 2px solid #ff9800;
 }
 
-.-mega-warning > .mega-icon,
-.-mega-warning:hover,
-.-mega-warning.-mega-active {
+.-m-radio-warning > .m-radio-icon,
+.-m-radio-warning:hover,
+.-m-radio-warning.-m-radio-active {
   background-color: #ff9800;
   color: #fff;
 }
 
-.-mega-info {
+.-m-radio-info {
   border: 2px solid #0dcaf0;
   background-color: #fff;
   color: #0dcaf0;
 }
 
-.-mega-info > .mega-check {
+.-m-radio-info > .m-radio-check {
   border: 2px solid #0dcaf0;
 }
 
-.-mega-info .mega-check-icon {
+.-m-radio-info .m-radio-check--icon {
   border-bottom: 2px solid #0dcaf0;
   border-right: 2px solid #0dcaf0;
 }
 
-.-mega-info > .mega-icon,
-.-mega-info:hover,
-.-mega-info.-mega-active {
+.-m-radio-info > .m-radio-icon,
+.-m-radio-info:hover,
+.-m-radio-info.-m-radio-active {
   background-color: #0dcaf0;
   color: #fff;
 }
 
-.-mega-dark {
+.-m-radio-dark {
   border: 2px solid #323a46;
   background-color: #fff;
   color: #323a46;
 }
 
-.-mega-dark > .mega-check {
+.-m-radio-dark > .m-radio-check {
   border: 2px solid #323a46;
 }
 
-.-mega-dark .mega-check-icon {
+.-m-radio-dark .m-radio-check--icon {
   border-bottom: 2px solid #323a46;
   border-right: 2px solid #323a46;
 }
   
-.-mega-dark > .mega-icon,
-.-mega-dark:hover, 
-.-mega-dark.-mega-active {
+.-m-radio-dark > .m-radio-icon,
+.-m-radio-dark:hover, 
+.-m-radio-dark.-m-radio-active {
   background-color: #323a46;
   color: #fff;
 }
   
-.-mega-pink {
+.-m-radio-pink {
   border: 2px solid #f06292;
   background-color: #fff;
   color: #f06292;
 }
 
-.-mega-pink > .mega-check {
+.-m-radio-pink > .m-radio-check {
   border: 2px solid #f06292;
 }
 
-.-mega-pink .mega-check-icon {
+.-m-radio-pink .m-radio-check--icon {
   border-bottom: 2px solid #f06292;
   border-right: 2px solid #f06292;
 }
 
-.-mega-pink > .mega-icon,
-.-mega-pink:hover,
-.-mega-pink.-mega-active {
+.-m-radio-pink > .m-radio-icon,
+.-m-radio-pink:hover,
+.-m-radio-pink.-m-radio-active {
   background-color: #f06292;
   color: #fff;
 }
 
-.-mega-lilac {
+.-m-radio-lilac {
   border: 2px solid #526dee;
   background-color: #fff;
   color: #526dee;
 }
 
-.-mega-lilac > .mega-check {
+.-m-radio-lilac > .m-radio-check {
   border: 2px solid #526dee;
 }
 
-.-mega-lilac .mega-check-icon {
+.-m-radio-lilac .m-radio-check--icon {
   border-bottom: 2px solid #526dee;
   border-right: 2px solid #526dee;
 }
 
-.-mega-lilac > .mega-icon,
-.-mega-lilac:hover,
-.-mega-lilac.-mega-active {
+.-m-radio-lilac > .m-radio-icon,
+.-m-radio-lilac:hover,
+.-m-radio-lilac.-m-radio-active {
   background-color: #526dee;
   color: #fff;
 }
 
-.-mega-purple {
+.-m-radio-purple {
   border: 2px solid #6559cc;
   background-color: #fff;
   color: #6559cc;
 }
 
-.-mega-purple > .mega-check {
+.-m-radio-purple > .m-radio-check {
   border: 2px solid #6559cc;
 }
 
-.-mega-purple .mega-check-icon {
+.-m-radio-purple .m-radio-check--icon {
   border-bottom: 2px solid #6559cc;
   border-right: 2px solid #6559cc;
 }
 
-.-mega-purple > .mega-icon,
-.-mega-purple:hover,
-.-mega-purple.-mega-active {
+.-m-radio-purple > .m-radio-icon,
+.-m-radio-purple:hover,
+.-m-radio-purple.-m-radio-active {
   background-color: #6559cc;
   color: #fff;
 }
 
-.-mega-blue-darken {
+.-m-radio-blue-darken {
   border: 2px solid #0D47A1;
   background-color: #fff;
   color: #0D47A1;
 }
 
-.-mega-blue-darken > .mega-check {
+.-m-radio-blue-darken > .m-radio-check {
   border: 2px solid #0D47A1;
 }
 
-.-mega-blue-darken .mega-check-icon {
+.-m-radio-blue-darken .m-radio-check--icon {
   border-bottom: 2px solid #0D47A1;
   border-right: 2px solid #0D47A1;
 }
 
-.-mega-blue-darken > .mega-icon,
-.-mega-blue-darken:hover,
-.-mega-blue-darken.-mega-active {
+.-m-radio-blue-darken > .m-radio-icon,
+.-m-radio-blue-darken:hover,
+.-m-radio-blue-darken.-m-radio-active {
   background-color: #0D47A1;
   color: #fff;
 }
 
-.-mega-orange {
+.-m-radio-orange {
   border: 2px solid #ff6f00;
   background-color: #fff;
   color: #ff6f00;
 }
 
-.-mega-orange > .mega-check {
+.-m-radio-orange > .m-radio-check {
   border: 2px solid #ff6f00;
 }
 
-.-mega-orange .mega-check-icon {
+.-m-radio-orange .m-radio-check--icon {
   border-bottom: 2px solid #ff6f00;
   border-right: 2px solid #ff6f00;
 }
   
-.-mega-orange > .mega-icon,
-.-mega-orange:hover,
-.-mega-orange.-mega-active {
+.-m-radio-orange > .m-radio-icon,
+.-m-radio-orange:hover,
+.-m-radio-orange.-m-radio-active {
   background-color: #ff6f00;
   color: #fff;
 }

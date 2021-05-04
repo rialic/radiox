@@ -1,7 +1,7 @@
 (() => {
     function MegaRadio() {
-        this.megaRadioGroupList = Array.from(document.querySelectorAll('.mega-group'));
-        this.megaRadioInputList = document.querySelectorAll('input.mega-radio[type="radio"]');
+        this.megaRadioGroupList = Array.from(document.querySelectorAll('.m-radio-group'));
+        this.megaRadioInputList = document.querySelectorAll('input.m-radio[type="radio"]');
 
         initMegaRadio();
         defineMegaRadioGroupEvent();
@@ -9,7 +9,7 @@
 
     function initMegaRadio() {
         this.megaRadioInputList.forEach(inputRadio => {
-            const megaRadioGroupDiv = inputRadio.closest('.mega-group');
+            const megaRadioGroupDiv = inputRadio.closest('.m-radio-group');
             const inputRadioClasses = Array.from(inputRadio.classList);
 
             const megaRadioEl = createElement('div', {
@@ -17,7 +17,7 @@
             });
 
             const megaRadioTextEl = createElement('div', {
-                'class': 'mega-text',
+                'class': 'm-radio-text',
             });
 
             showMegaRadioIcon(inputRadio, megaRadioEl);
@@ -28,7 +28,7 @@
     }
 
     const checkInitMegaRadio = (inputRadioClasses, inputRadio) => {
-        const hasActiveMegaRadio = inputRadioClasses.includes('-mega-active');
+        const hasActiveMegaRadio = inputRadioClasses.includes('-m-radio-active');
 
         if (hasActiveMegaRadio) inputRadio.checked = true;
     }
@@ -38,7 +38,7 @@
 
         if (hasIcon) {
             const megaRadioIconEl = createElement('div', {
-                'class': 'mega-icon'
+                'class': 'm-radio-icon'
             });
 
             const iconEl = createElement('i', {
@@ -81,28 +81,28 @@
         const megaRadioEl = event.target.parentElement;
         const megaRadioInputEl = event.target;
 
-        megaRadioEl.classList.add('-mega-active');
+        megaRadioEl.classList.add('-m-radio-active');
         megaRadioInputEl.checked = true;
 
         showCheckIcon(megaRadioEl);
     }
 
     const unCheckMegaRadio = event => {
-        const megaRadioGroupEl = event.target.closest('.mega-group');
-        const megaRadioEl = megaRadioGroupEl.querySelector('.-mega-active');
-        const megaRadioCheckEl = megaRadioEl.querySelector('.mega-check');
+        const megaRadioGroupEl = event.target.closest('.m-radio-group');
+        const megaRadioEl = megaRadioGroupEl.querySelector('.-m-radio-active');
+        const megaRadioCheckEl = megaRadioEl.querySelector('.m-radio-check');
         const megaRadioInputEl = megaRadioEl.querySelector('input[type="radio"]');
 
         megaRadioCheckEl.remove();
-        megaRadioEl.classList.remove('-mega-active');
+        megaRadioEl.classList.remove('-m-radio-active');
         megaRadioInputEl.checked = false;
     }
 
     const showCheckIcon = megaRadioEl => {
-        const megaRadioCheckEl = createElement('div', {'class': 'mega-check'});
-        const checkIconEl = createElement('div', {'class': 'mega-check-icon'});
+        const megaRadioCheckEl = createElement('div', {'class': 'm-radio-check'});
+        const checkIconEl = createElement('div', {'class': 'm-radio-check--icon'});
 
-        const hasActiveMegaRadio = Array.from(megaRadioEl.classList).includes('-mega-active');
+        const hasActiveMegaRadio = Array.from(megaRadioEl.classList).includes('-m-radio-active');
 
         if (hasActiveMegaRadio) {
             megaRadioEl.insertAdjacentElement('afterbegin', megaRadioCheckEl);
