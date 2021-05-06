@@ -122,24 +122,24 @@
 
 /* MEGA RADIO COLORS */
 .-m-radio-primary {
-  border: 2px solid #348cd4;
+  border: 2px solid #3bafda;
   background-color: #fff;
-  color: #348cd4;
+  color: #3bafda;
 }
 
 .-m-radio-primary > .m-radio-check {
-  border: 2px solid #348cd4;
+  border: 2px solid #3bafda;
 }
 
 .-m-radio-primary .m-radio-check--icon {
-  border-bottom: 2px solid #348cd4;
-  border-right: 2px solid #348cd4;
+  border-bottom: 2px solid #3bafda;
+  border-right: 2px solid #3bafda;
 }
 
 .-m-radio-primary > .m-radio-icon,
 .-m-radio-primary:hover,
 .-m-radio-primary.-m-radio-active {
-  background-color: #348cd4;
+  background-color: #3bafda;
   color: #fff;
 }
 
@@ -166,90 +166,90 @@
 }
 
 .-m-radio-success {
-  border: 2px solid #78c350;
+  border: 2px solid #1abc9c;
   background-color: #fff;
-  color: #78c350;
+  color: #1abc9c;
 }
 
 .-m-radio-success > .m-radio-check {
-  border: 2px solid #78c350;
+  border: 2px solid #1abc9c;
 }
 
 .-m-radio-success .m-radio-check--icon {
-  border-bottom: 2px solid #78c350;
-  border-right: 2px solid #78c350;
+  border-bottom: 2px solid #1abc9c;
+  border-right: 2px solid #1abc9c;
 }
 
 .-m-radio-success > .m-radio-icon,
 .-m-radio-success:hover,
 .-m-radio-success.-m-radio-active {
-  background-color: #78c350;
+  background-color: #1abc9c;
   color: #fff;
 }
 
 .-m-radio-danger {
-  border: 2px solid #dc3545;
+  border: 2px solid #f1556c;
   background-color: #fff;
-  color: #dc3545;
+  color: #f1556c;
 }
 
 .-m-radio-danger > .m-radio-check {
-  border: 2px solid #dc3545;
+  border: 2px solid #f1556c;
 }
 
 .-m-radio-danger .m-radio-check--icon {
-  border-bottom: 2px solid #dc3545;
-  border-right: 2px solid #dc3545;
+  border-bottom: 2px solid #f1556c;
+  border-right: 2px solid #f1556c;
 }
 
 .-m-radio-danger > .m-radio-icon,
 .-m-radio-danger:hover,
 .-m-radio-danger.-m-radio-active {
-  background-color: #dc3545;
+  background-color: #f1556c;
   color: #fff;
 }
 
 .-m-radio-warning {
-  border: 2px solid #ff9800;
+  border: 2px solid #f7b84b;
   background-color: #fff;
-  color: #ff9800;
+  color: #f7b84b;
 }
 
 .-m-radio-warning > .m-radio-check {
-  border: 2px solid #ff9800;
+  border: 2px solid #f7b84b;
 }
 
 .-m-radio-warning .m-radio-check--icon {
-  border-bottom: 2px solid #ff9800;
-  border-right: 2px solid #ff9800;
+  border-bottom: 2px solid #f7b84b;
+  border-right: 2px solid #f7b84b;
 }
 
 .-m-radio-warning > .m-radio-icon,
 .-m-radio-warning:hover,
 .-m-radio-warning.-m-radio-active {
-  background-color: #ff9800;
+  background-color: #f7b84b;
   color: #fff;
 }
 
 .-m-radio-info {
-  border: 2px solid #0dcaf0;
+  border: 2px solid #37cde6;
   background-color: #fff;
-  color: #0dcaf0;
+  color: #37cde6;
 }
 
 .-m-radio-info > .m-radio-check {
-  border: 2px solid #0dcaf0;
+  border: 2px solid #37cde6;
 }
 
 .-m-radio-info .m-radio-check--icon {
-  border-bottom: 2px solid #0dcaf0;
-  border-right: 2px solid #0dcaf0;
+  border-bottom: 2px solid #37cde6;
+  border-right: 2px solid #37cde6;
 }
 
 .-m-radio-info > .m-radio-icon,
 .-m-radio-info:hover,
 .-m-radio-info.-m-radio-active {
-  background-color: #0dcaf0;
+  background-color: #37cde6;
   color: #fff;
 }
 
