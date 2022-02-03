@@ -1,0 +1,17 @@
+{
+  "name": "radiox",
+  "version": "1.0.0",
+  "packageManager": "yarn@3.1.1",
+  "scripts": {
+    "dev": "npx mix",
+    "watch": "npx mix watch",
+    "watch-poll": "npx mix watch -- --watch-options-poll=1000",
+    "hot": "npx mix watch --hot",
+    "prod": "npx mix --production"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-eslintx": "^1.0.0",
+    "laravel-mix": "^6.0.41"
+  }
+}

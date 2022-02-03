@@ -1,13 +1,13 @@
 /*--------------------*\
-  MEGA RADIO
+  RADIO X
 \*--------------------*/
-.m-radio-group, .m-radio, .m-radio-icon, .m-radio-text {
+.radiox-group, .radiox, .radiox-icon, .radiox-text {
   position: relative;
   display: flex;
   box-sizing: border-box;
 }
 
-.m-radio-group {
+.radiox-group {
   flex-wrap: wrap;
   padding: 0;
   margin-right: -.3125rem;
@@ -16,14 +16,14 @@
   border: 0 transparent;
 }
 
-.m-radio {
+.radiox {
   flex: 1;
   margin: 0 .3125rem .625rem;
   border-radius: .3125rem;
   cursor: pointer;
 }
 
-.m-radio > input[type='radio'] {
+.radiox > input[type='radio'] {
   position: absolute;
   top: -2px;
   left: -2px;
@@ -39,27 +39,27 @@
   z-index: 1;
 }
 
-.m-radio-text {
-  flex: 1 1 100%; 
+.radiox-text {
+  flex: 1 1 100%;
   flex-wrap: wrap;
   padding: .3125rem 0.625rem;
   font-size: 1rem;
   font-family: inherit;
 }
 
-.m-radio-icon {
+.radiox-icon {
   min-width: 2.5rem;
   margin: -.0625rem;
   border-radius: .3125rem;
   font-size: 1.5rem;
 }
 
-.m-radio-icon, .m-radio-text {
-  align-items: center; 
+.radiox-icon, .radiox-text {
+  align-items: center;
   justify-content: center;
 }
 
-.m-radio-check {
+.radiox-check {
   display: flex;
   padding: .125rem .3125rem .1875rem;
   position: absolute;
@@ -69,7 +69,7 @@
   background-color: #fff;
 }
 
-.m-radio-check--icon {
+.radiox-check--icon {
   display: inline-block;
   transform: rotate(45deg);
   height: .5rem;
@@ -77,310 +77,310 @@
 }
 
 /*  MEGA RADIO FILL */
-.-m-radio-fill {
+.radiox--fill {
   flex: 1 1 auto;
 }
 
 /*  MEGA RADIO SIZE */
-.-m-radio-group-sm {
+.radiox--group-sm {
   min-height: 2.1875rem;
 }
 
-.-m-radio-group-sm .m-radio-text {
+.radiox--group-sm .radiox-text {
   font-size: .875rem;
 }
 
-.-m-radio-group-sm .m-radio-icon {
+.radiox--group-sm .radiox-icon {
   font-size: .875rem;
 }
 
-.-m-radio-group-xs {
+.radiox--group-xs {
   min-height: 2.1875rem;
 }
 
-.-m-radio-group-xs .m-radio-text {
+.radiox--group-xs .radiox-text {
   font-size: .75rem;
   padding: .1875rem 0.625rem;
 }
 
-.-m-radio-group-xs .m-radio-icon {
+.radiox--group-xs .radiox-icon {
   font-size: .75rem;
 }
 
 /*  MEGA RADIO FONT */
-.-m-radio-text-uppercase > .m-radio-text {
+.radiox--text-uppercase > .radiox-text {
   text-transform: uppercase;
 }
 
-.-m-radio-fw-semibold > .m-radio-text {
+.radiox--fw-semibold > .radiox-text {
   font-weight: 600;
 }
 
-.-m-radio-fw-bold > .m-radio-text {
+.radiox--fw-bold > .radiox-text {
   font-weight: bold;
 }
 
 /* MEGA RADIO COLORS */
-.-m-radio-primary {
+.radiox--primary {
   border: 2px solid #3bafda;
   background-color: #fff;
   color: #3bafda;
 }
 
-.-m-radio-primary > .m-radio-check {
+.radiox--primary > .radiox-check {
   border: 2px solid #3bafda;
 }
 
-.-m-radio-primary .m-radio-check--icon {
+.radiox--primary .radiox-check--icon {
   border-bottom: 2px solid #3bafda;
   border-right: 2px solid #3bafda;
 }
 
-.-m-radio-primary > .m-radio-icon,
-.-m-radio-primary:hover,
-.-m-radio-primary.-m-radio-active {
+.radiox--primary > .radiox-icon,
+.radiox--primary:hover,
+.radiox--primary.radiox--active {
   background-color: #3bafda;
   color: #fff;
 }
 
-.-m-radio-secondary {
+.radiox--secondary {
   border: 2px solid #6c757d;
   background-color: #fff;
   color: #6c757d;
 }
 
-.-m-radio-secondary > .m-radio-check {
+.radiox--secondary > .radiox-check {
   border: 2px solid #6c757d;
 }
 
-.-m-radio-secondary .m-radio-check--icon {
+.radiox--secondary .radiox-check--icon {
   border-bottom: 2px solid #6c757d;
   border-right: 2px solid #6c757d;
 }
 
-.-m-radio-secondary > .m-radio-icon,
-.-m-radio-secondary:hover,
-.-m-radio-secondary.-m-radio-active {
+.radiox--secondary > .radiox-icon,
+.radiox--secondary:hover,
+.radiox--secondary.radiox--active {
   background-color: #6c757d;
   color: #fff;
 }
 
-.-m-radio-success {
+.radiox--success {
   border: 2px solid #1abc9c;
   background-color: #fff;
   color: #1abc9c;
 }
 
-.-m-radio-success > .m-radio-check {
+.radiox--success > .radiox-check {
   border: 2px solid #1abc9c;
 }
 
-.-m-radio-success .m-radio-check--icon {
+.radiox--success .radiox-check--icon {
   border-bottom: 2px solid #1abc9c;
   border-right: 2px solid #1abc9c;
 }
 
-.-m-radio-success > .m-radio-icon,
-.-m-radio-success:hover,
-.-m-radio-success.-m-radio-active {
+.radiox--success > .radiox-icon,
+.radiox--success:hover,
+.radiox--success.radiox--active {
   background-color: #1abc9c;
   color: #fff;
 }
 
-.-m-radio-danger {
+.radiox--danger {
   border: 2px solid #f1556c;
   background-color: #fff;
   color: #f1556c;
 }
 
-.-m-radio-danger > .m-radio-check {
+.radiox--danger > .radiox-check {
   border: 2px solid #f1556c;
 }
 
-.-m-radio-danger .m-radio-check--icon {
+.radiox--danger .radiox-check--icon {
   border-bottom: 2px solid #f1556c;
   border-right: 2px solid #f1556c;
 }
 
-.-m-radio-danger > .m-radio-icon,
-.-m-radio-danger:hover,
-.-m-radio-danger.-m-radio-active {
+.radiox--danger > .radiox-icon,
+.radiox--danger:hover,
+.radiox--danger.radiox--active {
   background-color: #f1556c;
   color: #fff;
 }
 
-.-m-radio-warning {
+.radiox--warning {
   border: 2px solid #f7b84b;
   background-color: #fff;
   color: #f7b84b;
 }
 
-.-m-radio-warning > .m-radio-check {
+.radiox--warning > .radiox-check {
   border: 2px solid #f7b84b;
 }
 
-.-m-radio-warning .m-radio-check--icon {
+.radiox--warning .radiox-check--icon {
   border-bottom: 2px solid #f7b84b;
   border-right: 2px solid #f7b84b;
 }
 
-.-m-radio-warning > .m-radio-icon,
-.-m-radio-warning:hover,
-.-m-radio-warning.-m-radio-active {
+.radiox--warning > .radiox-icon,
+.radiox--warning:hover,
+.radiox--warning.radiox--active {
   background-color: #f7b84b;
   color: #fff;
 }
 
-.-m-radio-info {
+.radiox--info {
   border: 2px solid #37cde6;
   background-color: #fff;
   color: #37cde6;
 }
 
-.-m-radio-info > .m-radio-check {
+.radiox--info > .radiox-check {
   border: 2px solid #37cde6;
 }
 
-.-m-radio-info .m-radio-check--icon {
+.radiox--info .radiox-check--icon {
   border-bottom: 2px solid #37cde6;
   border-right: 2px solid #37cde6;
 }
 
-.-m-radio-info > .m-radio-icon,
-.-m-radio-info:hover,
-.-m-radio-info.-m-radio-active {
+.radiox--info > .radiox-icon,
+.radiox--info:hover,
+.radiox--info.radiox--active {
   background-color: #37cde6;
   color: #fff;
 }
 
-.-m-radio-dark {
+.radiox--dark {
   border: 2px solid #323a46;
   background-color: #fff;
   color: #323a46;
 }
 
-.-m-radio-dark > .m-radio-check {
+.radiox--dark > .radiox-check {
   border: 2px solid #323a46;
 }
 
-.-m-radio-dark .m-radio-check--icon {
+.radiox--dark .radiox-check--icon {
   border-bottom: 2px solid #323a46;
   border-right: 2px solid #323a46;
 }
-  
-.-m-radio-dark > .m-radio-icon,
-.-m-radio-dark:hover, 
-.-m-radio-dark.-m-radio-active {
+
+.radiox--dark > .radiox-icon,
+.radiox--dark:hover,
+.radiox--dark.radiox--active {
   background-color: #323a46;
   color: #fff;
 }
-  
-.-m-radio-pink {
+
+.radiox--pink {
   border: 2px solid #f06292;
   background-color: #fff;
   color: #f06292;
 }
 
-.-m-radio-pink > .m-radio-check {
+.radiox--pink > .radiox-check {
   border: 2px solid #f06292;
 }
 
-.-m-radio-pink .m-radio-check--icon {
+.radiox--pink .radiox-check--icon {
   border-bottom: 2px solid #f06292;
   border-right: 2px solid #f06292;
 }
 
-.-m-radio-pink > .m-radio-icon,
-.-m-radio-pink:hover,
-.-m-radio-pink.-m-radio-active {
+.radiox--pink > .radiox-icon,
+.radiox--pink:hover,
+.radiox--pink.radiox--active {
   background-color: #f06292;
   color: #fff;
 }
 
-.-m-radio-lilac {
+.radiox--lilac {
   border: 2px solid #526dee;
   background-color: #fff;
   color: #526dee;
 }
 
-.-m-radio-lilac > .m-radio-check {
+.radiox--lilac > .radiox-check {
   border: 2px solid #526dee;
 }
 
-.-m-radio-lilac .m-radio-check--icon {
+.radiox--lilac .radiox-check--icon {
   border-bottom: 2px solid #526dee;
   border-right: 2px solid #526dee;
 }
 
-.-m-radio-lilac > .m-radio-icon,
-.-m-radio-lilac:hover,
-.-m-radio-lilac.-m-radio-active {
+.radiox--lilac > .radiox-icon,
+.radiox--lilac:hover,
+.radiox--lilac.radiox--active {
   background-color: #526dee;
   color: #fff;
 }
 
-.-m-radio-purple {
+.radiox--purple {
   border: 2px solid #6559cc;
   background-color: #fff;
   color: #6559cc;
 }
 
-.-m-radio-purple > .m-radio-check {
+.radiox--purple > .radiox-check {
   border: 2px solid #6559cc;
 }
 
-.-m-radio-purple .m-radio-check--icon {
+.radiox--purple .radiox-check--icon {
   border-bottom: 2px solid #6559cc;
   border-right: 2px solid #6559cc;
 }
 
-.-m-radio-purple > .m-radio-icon,
-.-m-radio-purple:hover,
-.-m-radio-purple.-m-radio-active {
+.radiox--purple > .radiox-icon,
+.radiox--purple:hover,
+.radiox--purple.radiox--active {
   background-color: #6559cc;
   color: #fff;
 }
 
-.-m-radio-blue-darken {
+.radiox--blue-darken {
   border: 2px solid #0D47A1;
   background-color: #fff;
   color: #0D47A1;
 }
 
-.-m-radio-blue-darken > .m-radio-check {
+.radiox--blue-darken > .radiox-check {
   border: 2px solid #0D47A1;
 }
 
-.-m-radio-blue-darken .m-radio-check--icon {
+.radiox--blue-darken .radiox-check--icon {
   border-bottom: 2px solid #0D47A1;
   border-right: 2px solid #0D47A1;
 }
 
-.-m-radio-blue-darken > .m-radio-icon,
-.-m-radio-blue-darken:hover,
-.-m-radio-blue-darken.-m-radio-active {
+.radiox--blue-darken > .radiox-icon,
+.radiox--blue-darken:hover,
+.radiox--blue-darken.radiox--active {
   background-color: #0D47A1;
   color: #fff;
 }
 
-.-m-radio-orange {
+.radiox--orange {
   border: 2px solid #ff6f00;
   background-color: #fff;
   color: #ff6f00;
 }
 
-.-m-radio-orange > .m-radio-check {
+.radiox--orange > .radiox-check {
   border: 2px solid #ff6f00;
 }
 
-.-m-radio-orange .m-radio-check--icon {
+.radiox--orange .radiox-check--icon {
   border-bottom: 2px solid #ff6f00;
   border-right: 2px solid #ff6f00;
 }
-  
-.-m-radio-orange > .m-radio-icon,
-.-m-radio-orange:hover,
-.-m-radio-orange.-m-radio-active {
+
+.radiox--orange > .radiox-icon,
+.radiox--orange:hover,
+.radiox--orange.radiox--active {
   background-color: #ff6f00;
   color: #fff;
 }
